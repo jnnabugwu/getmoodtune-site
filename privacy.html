@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · MoodTune</title>
+  <meta name="description" content="What MoodTune collects, why, and how to get it deleted.">
+  <link rel="canonical" href="https://getmoodtune.com/privacy">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#F5F1E7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="wrap top">
+    <a href="/" class="lockup" aria-label="MoodTune home">
+      <svg viewBox="0 0 220 220" aria-hidden="true" class="mark">
+        <g transform="translate(10,10)">
+          <rect x="138" y="0" width="13" height="150" fill="var(--ink)"/>
+          <path d="M 151 0 C 198 18 208 60 178 86 C 200 56 188 30 151 22 Z" fill="var(--ink)"/>
+          <ellipse cx="100" cy="158" rx="58" ry="42" fill="var(--ink)" transform="rotate(-22 100 158)"/>
+          <g transform="rotate(-22 100 158)" fill="none">
+            <circle cx="84" cy="150" r="6.5" fill="var(--cream)"/>
+            <circle cx="116" cy="150" r="6.5" fill="var(--cream)"/>
+            <path d="M 80 170 Q 100 186 120 170" stroke="var(--cream)" stroke-width="6" stroke-linecap="round"/>
+          </g>
+        </g>
+      </svg>
+      <span>moodtune</span>
+    </a>
+  </header>
+
+  <main class="wrap doc">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated October 17, 2026</p>
+
+    <p>MoodTune ("we") is a mobile app that listens to a song and tells you its mood. This page explains what we collect, why, who we share it with, and how to get it deleted. The short version: <strong>we don't keep your audio, we don't sell your data, and we don't use advertising or analytics trackers.</strong></p>
+
+    <h2>Your audio</h2>
+    <p>When you analyze a song, the app sends the audio file to our server. The server writes it to a temporary file, analyzes it, and deletes it when the analysis finishes. Audio is never saved to a database or cloud storage. Part of the analysis also runs on your phone, using a model built into the app.</p>
+    <p>For songs from the free music catalog, the audio comes from Jamendo. Your phone and our server download the track, analyze it, and delete it the same way.</p>
+
+    <h2>What we collect</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Data</th><th>When</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Email address and password</td><td>If you create an account</td><td>To sign you in. Passwords are handled by our authentication provider, and we never see them.</td></tr>
+          <tr><td>Saved results: song title, artist, the mood we showed you, and confidence</td><td>Signed-in users, after each analysis</td><td>To show your History. For uploads with no title, we use the file name without its extension.</td></tr>
+          <tr><td>Mood results and your "does this feel right?" answer, with device model, OS version, and app version</td><td>Every analysis, for guests too</td><td>To measure and improve accuracy. These records contain no title, artist, file name, or audio. They're linked to your account only if you're signed in.</td></tr>
+          <tr><td>Crash and error reports</td><td>When something goes wrong</td><td>To fix bugs. Reports can include technical details about the request, such as an uploaded file's name and size, but never the audio.</td></tr>
+          <tr><td>Catalog searches</td><td>When you search the catalog</td><td>Sent straight from your phone to Jamendo to find tracks.</td></tr>
+          <tr><td>Spotify account details and access tokens</td><td>Only if you connect Spotify</td><td>To read your playlists for analysis. We ask for your profile, email, and playlists, and nothing else.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>We don't collect your location, contacts, photos, or advertising identifiers. We don't use analytics SDKs or tracking pixels.</p>
+
+    <h2>Who we share it with</h2>
+    <p>We don't sell or rent personal information, and we don't share it for advertising. We use these service providers to run MoodTune:</p>
+    <ul>
+      <li><strong>Supabase</strong>: accounts and database.</li>
+      <li><strong>Railway</strong>: hosting for our analysis server.</li>
+      <li><strong>Sentry</strong>: crash and error reporting.</li>
+      <li><strong>Jamendo</strong>: the free music catalog (searches and track audio).</li>
+      <li><strong>Spotify</strong>: only if you choose to connect it.</li>
+    </ul>
+    <p>We may also disclose information if the law requires it.</p>
+
+    <h2>On your device</h2>
+    <p>The app stores your sign-in session and one display setting on your phone. On supported iPhones, mood descriptions may be written by Apple's on-device language model. That model receives only mood and sound measurements, and nothing leaves your phone.</p>
+
+    <h2>How long we keep it</h2>
+    <ul>
+      <li><strong>Audio:</strong> deleted as soon as the analysis finishes.</li>
+      <li><strong>Account and History:</strong> kept until you ask us to delete your account. Deleting your account also deletes your History.</li>
+      <li><strong>Spotify tokens:</strong> deleted when you disconnect Spotify in the app.</li>
+      <li><strong>Mood accuracy records:</strong> kept to improve the model. If you delete your account, they're kept without any link to you.</li>
+    </ul>
+
+    <h2>Your choices and rights</h2>
+    <p>You can use MoodTune without an account. To access, correct, or delete your data, or to delete your account, email <a href="mailto:privacy@getmoodtune.com">privacy@getmoodtune.com</a> from the address on your account (<a href="/delete-account">how account deletion works</a>). We'll respond within 30 days. Depending on where you live, you may have further rights under laws such as the GDPR or CCPA. Contact us to use them.</p>
+
+    <h2>Children</h2>
+    <p>MoodTune isn't directed at children under 13, and we don't knowingly collect their personal information. If you think a child has given us information, contact us and we'll delete it.</p>
+
+    <h2>Security</h2>
+    <p>Data is sent over HTTPS, and access to our database is restricted. No system is perfectly secure, but we work to protect your information.</p>
+
+    <h2>Changes</h2>
+    <p>If we change this policy, we'll update the date at the top. If a change is significant, we'll also tell you in the app.</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:privacy@getmoodtune.com">privacy@getmoodtune.com</a></p>
+  </main>
+
+  <footer class="wrap foot">
+    <nav><a href="/">Home</a><a href="mailto:hello@getmoodtune.com">Contact</a></nav>
+    <p>© 2026 MoodTune</p>
+  </footer>
+</body>
+</html>
