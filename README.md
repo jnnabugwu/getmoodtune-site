@@ -4,7 +4,8 @@ Static landing + privacy page for MoodTune. Hosted on Vercel (Hobby team `jnnabu
 
 ```sh
 python3 -m http.server 8765        # preview at http://localhost:8765 (root-relative paths need a server)
-vercel deploy --prod --scope jnnabugwus-projects
+git push                           # pushes to main deploy to getmoodtune.com automatically (Vercel ↔ GitHub)
+vercel deploy --prod --scope jnnabugwus-projects   # manual fallback
 ```
 
 - `og.png` is the 1200×630 link-preview image. To regenerate it from `_build/og.html`, run:
