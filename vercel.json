@@ -4,16 +4,26 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.getmoodtune.com" }],
-      "destination": "https://getmoodtune.com/:path*",
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.getmoodtune.com"
+        }
+      ],
+      "destination": "https://getmoodtune.com/$1",
       "permanent": true
     }
   ],
   "headers": [
     {
       "source": "/.well-known/(.*)",
-      "headers": [{ "key": "Content-Type", "value": "application/json" }]
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
+      ]
     }
   ]
 }
