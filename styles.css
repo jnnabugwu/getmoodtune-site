@@ -45,6 +45,33 @@ h1 {
 }
 .lede { margin: 20px 0 0; max-width: 34ch; font-size: clamp(18px, 2.4vw, 21px); color: var(--ink-2); }
 
+/* TestFlight waitlist form */
+.signup { margin-top: 32px; max-width: 520px; }
+.signup-label { display: block; margin-bottom: 8px; font-size: 15px; font-weight: 600; }
+.signup-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.signup input[type="email"] {
+  flex: 1 1 220px; min-width: 0;
+  padding: 13px 16px; border-radius: 12px;
+  border: 1px solid var(--line); background: #fff; color: var(--ink);
+  font: inherit; font-size: 16px; /* 16px stops iOS zooming on focus */
+}
+.signup input[type="email"]:focus { outline: 2px solid var(--ink); outline-offset: 1px; border-color: transparent; }
+.signup button {
+  flex: 0 0 auto;
+  padding: 13px 20px; border: 0; border-radius: 12px;
+  background: var(--ink); color: var(--page);
+  font: inherit; font-size: 16px; font-weight: 600; cursor: pointer;
+}
+@media (max-width: 480px) { .signup button { flex-basis: 100%; } }
+.signup button:hover { background: #000; }
+.signup button:disabled { opacity: 0.6; cursor: progress; }
+.signup-status { margin: 10px 0 0; font-size: 14px; color: var(--muted); }
+.signup-status a { color: var(--ink-2); }
+.signup-status[data-kind="error"] { color: #B3261E; }
+.signup-status[data-kind="ok"] { color: var(--ink); font-weight: 600; }
+.signup.is-done .signup-row, .signup.is-done .signup-label { display: none; }
+.trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
 .moods {
   display: grid; gap: 12px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
