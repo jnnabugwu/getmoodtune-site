@@ -27,7 +27,13 @@
   const done = (email) => {
     form.classList.add("is-done");
     say("You're on the list. We'll email a TestFlight invite to " + email + ".", "ok");
+    // The focused button is now hidden; keep keyboard focus on the message.
+    status.tabIndex = -1;
+    status.focus();
   };
+
+  // The button ships disabled so the form can't submit without this script.
+  button.disabled = false;
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -54,12 +60,15 @@
           Prefer: "return=minimal",
         },
         body: JSON.stringify({ email, source }),
+        // Don't leave the button stuck if the network stalls.
+        signal: AbortSignal.timeout ? AbortSignal.timeout(10000) : undefined,
       });
       // 409: already signed up. Same message, so the form can't be used to
       // check whether an address is on the list.
       if (res.ok || res.status === 409) return done(email);
       throw new Error("HTTP " + res.status);
-    } catch (_) {
+    } catch (err) {
+      console.error("Beta signup failed:", err);
       say("Something went wrong. Try again, or email hello@getmoodtune.com.", "error");
     } finally {
       button.disabled = false;
